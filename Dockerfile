@@ -4,12 +4,12 @@ ARG ANSIBLE_VERSION
 ENV ANSIBLE_VERSION=${ANSIBLE_VERSION:-2.9.6}
 
 RUN apk add --no-cache \
-        gcc=8.3.0-r0 \
+        gcc=9.2.0-r3 \
         libffi-dev=3.2.1-r6 \
-        musl-dev=1.1.20-r5 \
-        openssh-client=7.9_p1-r6 \
-        openssl-dev=1.1.1d-r2 \
-        python3-dev=3.6.9-r2
+        musl-dev=1.1.24-r1 \
+        openssh-client=8.1_p1-r0 \
+        openssl-dev=1.1.1d-r3 \
+        python3-dev=3.8.2-r0
 
 RUN python3 -m pip install \
         ansible==${ANSIBLE_VERSION} \
