@@ -3,13 +3,15 @@ FROM python:3.9.2-alpine
 ARG ANSIBLE_VERSION
 ENV ANSIBLE_VERSION=${ANSIBLE_VERSION:-2.9.6}
 
+ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
+
 RUN apk add --no-cache \
-        gcc=9.2.0-r3 \
-        libffi-dev=3.2.1-r6 \
-        musl-dev=1.1.24-r1 \
-        openssh-client=8.1_p1-r0 \
-        openssl-dev=1.1.1d-r3 \
-        python3-dev=3.8.2-r0
+        gcc=10.2.1_pre1-r3 \
+        libffi-dev=3.3-r2 \
+        musl-dev=1.2.2-r0 \
+        openssh-client=8.4_p1-r2 \
+        openssl-dev=1.1.1j-r0 \
+        python3-dev=3.8.7-r1
 
 RUN python3 -m pip install \
         ansible==${ANSIBLE_VERSION} \
