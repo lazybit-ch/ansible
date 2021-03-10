@@ -13,7 +13,7 @@ RUN apk add --no-cache \
         openssl-dev=1.1.1j-r0 \
         python3-dev=3.8.7-r1
 
-RUN python3 -m pip install \
+RUN python3 -m pip install --no-cache-dir \
         ansible==${ANSIBLE_VERSION} \
         apache-libcloud==2.8.1 \
         boto==2.49.0 \
