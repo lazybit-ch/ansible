@@ -1,4 +1,4 @@
-FROM python:3.9.2-alpine
+FROM python:3.9.4-alpine
 
 ARG ANSIBLE_VERSION
 ENV ANSIBLE_VERSION=${ANSIBLE_VERSION:-2.9.6}
