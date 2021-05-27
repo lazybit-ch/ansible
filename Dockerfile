@@ -11,7 +11,7 @@ RUN apk add --no-cache \
         musl-dev=1.2.2-r0 \
         openssh-client=8.4_p1-r3 \
         openssl-dev=1.1.1k-r0 \
-        python3-dev=3.8.7-r1
+        python3-dev=3.8.10-r0
 
 RUN python3 -m pip install --no-cache-dir \
         ansible==${ANSIBLE_VERSION} \
