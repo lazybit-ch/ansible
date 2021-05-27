@@ -9,7 +9,7 @@ RUN apk add --no-cache \
         gcc=10.2.1_pre1-r3 \
         libffi-dev=3.3-r2 \
         musl-dev=1.2.2-r0 \
-        openssh-client=8.4_p1-r2 \
+        openssh-client=8.4_p1-r3 \
         openssl-dev=1.1.1j-r0 \
         python3-dev=3.8.7-r1
 
