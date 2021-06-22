@@ -21,4 +21,12 @@ RUN python3 -m pip install --no-cache-dir \
         google-auth==1.11.3 \
         requests==2.23.0
 
+RUN addgroup -g 1000 ubuntu && \
+    adduser -G ubuntu -u 1000 ubuntu -D
+
+RUN mkdir /.ansible && \
+    chown -R 1000:1000 /.ansible
+
+USER ansible
+
 ENTRYPOINT ["ansible"]
